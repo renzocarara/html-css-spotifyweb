@@ -105,11 +105,16 @@ nav ul li a {
 /* ******* ASIDE ***** */
 /* ******************* */
 aside {
-    background-color: lightblue;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    color: grey;
+    background-color: #131200;
     float: left;
     width: 210px;
     height: 100vh;
     padding: 10px;
+    padding-bottom: 90px;
     position: fixed;
     left: 0;
     top: 0;
@@ -119,7 +124,8 @@ aside {
 /* ***** FOOTER ****** */
 /* ******************* */
 footer {
-    background-color: pink;
+    color: lightgrey;
+    background-color: #282828;
     height: 90px;
     padding: 10px;
     position: fixed;
