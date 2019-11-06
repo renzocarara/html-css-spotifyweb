@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    background-color: red;
+    height: 100vh;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main {
+    background-color: lightyellow;
+    float: left;
+    width: 100%;
+    /* offset per la sidebar che ha position:fixed, è la height di aside */
+    padding-left: 210px;
+    /* offset per il footer che ha position:fixed, è la height del footer */
+    padding-bottom: 90px;
+}
+
+aside {
+    background-color: lightblue;
+    float: left;
+    width: 210px;
+    height: 100vh;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+footer {
+    background-color: pink;
+    height: 90px;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#main-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* ************************************************* */
+/* ***************** MEDIA QUERY ******************* */
+/* ************************************************* */
+/* TABLET */
+/* da 992px in giù */
+@media screen and (max-width: 992px) {
+    /* menu inline scompare e appare hamburger */
+    /* nel footer, in basso a sinistra scompaiono i testi accanto all'immagine */
+}
+
+/* MOBILE */
+/* da 767px in giù */
+@media screen and (max-width: 767px) {
+
+    /* nella sidebar scompaiono testi, rimangono solo icone */
+    /* altezza del footer sembra maggiore? */
+    /* la width della sidebar diminuisce */
+    aside {
+        width: 100px;
+    }
+
+    main {
+        /* offset per la sidebar che ha position:fixed */
+        padding-left: 100px;
+    }
+
+    /* il contenuto del main non è più spaziato sui lati */
+    #main-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    /* nel footer scompare tutta la parte in fondo a destra (barra volume) */
+    /* ???nel footer la barra di avanzamento manca di minuti finali e icona repeat??? */
+}
