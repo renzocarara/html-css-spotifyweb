@@ -28,13 +28,6 @@ h1 {
     padding-left: 15px;
 }
 
-p {
-    text-align: center;
-    font-size: 11px;
-    font-weight: bold;
-    color: white;
-}
-
 /* ******************* */
 /* ******* MAIN ****** */
 /* ******************* */
@@ -43,9 +36,9 @@ main {
     background-image: linear-gradient(to bottom right, #8b8002, #080800);
     float: left;
     width: 100%;
-    /* offset per la sidebar che ha position:fixed, è la height di aside */
+    /* offset orizzontale per la sidebar che ha position:fixed, è la height di aside */
     padding-left: 210px;
-    /* offset per il footer che ha position:fixed, è la height del footer */
+    /* offset verticale per il footer che ha position:fixed, è la height del footer */
     padding-bottom: 90px;
 }
 
@@ -74,6 +67,10 @@ nav ul li a {
     text-transform: uppercase;
 }
 
+nav ul li:nth-child(1) span {
+    border-bottom: 3px solid #20D560;
+}
+
 #navbar-hamburger {
     display: none;
     color: white;
@@ -89,8 +86,8 @@ nav ul li a {
 }
 
 .flex-row img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
 }
 
 .cover {
@@ -101,9 +98,24 @@ nav ul li a {
     border-radius: 50%;
 }
 
+main p {
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+}
+
 /* ******************* */
 /* ******* ASIDE ***** */
 /* ******************* */
+.white {
+    color: white;
+}
+
+.gray {
+    color: gray
+}
+
 aside {
     display: flex;
     flex-flow: column nowrap;
@@ -113,11 +125,103 @@ aside {
     float: left;
     width: 210px;
     height: 100vh;
-    padding: 10px;
+    /* padding: 20px; */
+    /* offset orizzontale per la sidebar che ha position:fixed, è la height di aside */
     padding-bottom: 90px;
     position: fixed;
     left: 0;
     top: 0;
+}
+
+aside ul li {
+    padding: 5px 0;
+    list-style-type: none;
+}
+
+aside ul li a {
+    font-size: 11px;
+    font-weight: bold;
+    color: #c8c3c3;
+    text-decoration: none;
+}
+
+aside ul li i {
+    font-size: 18px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+aside p {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+aside h5 {
+    text-transform: uppercase;
+}
+
+#logo {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+#logo h2 {
+    display: inline-block;
+    vertical-align: text-bottom;
+    font-size: 22px;
+}
+
+#logo i {
+    font-size: 30px;
+}
+
+#logo a {
+    text-decoration: none;
+}
+
+#side-menu {
+    padding-bottom: 20px;
+}
+
+#side-menu li:nth-child(2) {
+    border-left: 5px solid #20D560;
+    padding-left: 15px;
+}
+
+#side-menu li:nth-child(2) a {
+    cursor: default;
+}
+
+#side-menu li:not(:nth-child(2)), #played, #aside-bottom {
+    padding-left: 20px;
+}
+
+#aside-bottom {
+    padding-right: 20px;
+}
+
+#played p {
+    padding-top: 15px;
+}
+
+#aside-bottom i {
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+#user i {
+    font-size: 26px;
+}
+
+#user, #install {
+    padding: 10px 0;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#install {
+    border-bottom: 1px solid gray;
 }
 
 /* ******************* */
@@ -163,16 +267,20 @@ footer {
 /* da 767px in giù */
 @media screen and (max-width: 767px) {
 
-    /* nella sidebar scompaiono testi, rimangono solo icone */
+    /* nella sidebar scompaiono i testi, rimangono solo icone */
+    #logo h2, #side-menu span, #played, #aside-bottom span {
+        display: none;
+    }
+
     /* altezza del footer sembra maggiore? */
     /* la width della sidebar diminuisce */
     aside {
-        width: 100px;
+        width: 72px;
     }
 
     main {
         /* offset per la sidebar che ha position:fixed */
-        padding-left: 100px;
+        padding-left: 72px;
     }
 
     /* nel footer scompare tutta la parte in fondo a destra (barra volume) */
