@@ -1,11 +1,17 @@
+/* ******************* */
+/* ***** GENERAL ***** */
+/* ******************* */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 #container {
-    background-color: red;
     height: 100vh;
 }
 
@@ -15,8 +21,26 @@
     clear: both;
 }
 
+h1 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 30px;
+    padding-left: 15px;
+}
+
+p {
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+}
+
+/* ******************* */
+/* ******* MAIN ****** */
+/* ******************* */
 main {
     background-color: lightyellow;
+    background-image: linear-gradient(to bottom right, #8b8002, #080800);
     float: left;
     width: 100%;
     /* offset per la sidebar che ha position:fixed, è la height di aside */
@@ -25,6 +49,49 @@ main {
     padding-bottom: 90px;
 }
 
+#main-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 15px;
+    list-style-type: none;
+}
+
+nav ul li a {
+    font-size: 10px;
+    font-weight: bold;
+    color: #c8c3c3;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.flex-row img {
+    width: 120px;
+    height: 120px;
+}
+
+.cover {
+    padding: 15px;
+}
+
+/* ******************* */
+/* ******* ASIDE ***** */
+/* ******************* */
 aside {
     background-color: lightblue;
     float: left;
@@ -36,6 +103,9 @@ aside {
     top: 0;
 }
 
+/* ******************* */
+/* ***** FOOTER ****** */
+/* ******************* */
 footer {
     background-color: pink;
     height: 90px;
@@ -44,12 +114,6 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-}
-
-#main-container {
-    width: 70%;
-    margin: 0 auto;
-    padding: 10px;
 }
 
 /* ************************************************* */
