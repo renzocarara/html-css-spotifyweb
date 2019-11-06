@@ -67,6 +67,10 @@ nav ul li a {
     text-transform: uppercase;
 }
 
+nav ul li a:hover {
+    color: white;
+}
+
 nav ul li:nth-child(1) span {
     border-bottom: 3px solid #20D560;
 }
@@ -189,10 +193,6 @@ aside h5 {
     padding-left: 15px;
 }
 
-#side-menu li:nth-child(2) a {
-    cursor: default;
-}
-
 #side-menu li:not(:nth-child(2)), #played, #aside-bottom {
     padding-left: 20px;
 }
@@ -212,6 +212,11 @@ aside h5 {
 
 #user i {
     font-size: 26px;
+}
+
+#install a:hover, #install i:hover, #side-menu i:hover,
+#side-menu a:hover {
+    color: white;
 }
 
 #user, #install {
