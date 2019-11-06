@@ -24,7 +24,7 @@ body {
 h1 {
     font-size: 32px;
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding-left: 15px;
 }
 
@@ -50,7 +50,7 @@ main {
 }
 
 #main-container {
-    width: 70%;
+    width: 72%;
     margin: 0 auto;
     padding: 10px;
 }
@@ -62,7 +62,7 @@ nav {
 
 nav ul li {
     display: inline-block;
-    padding: 15px;
+    padding: 15px 10px;
     list-style-type: none;
 }
 
@@ -72,6 +72,14 @@ nav ul li a {
     color: #c8c3c3;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+#navbar-hamburger {
+    display: none;
+    color: white;
+    font-size: 28px;
+    text-align: left;
+    padding-top: 15px;
 }
 
 .flex-row {
@@ -87,6 +95,10 @@ nav ul li a {
 
 .cover {
     padding: 15px;
+}
+
+.rounded {
+    border-radius: 50%;
 }
 
 /* ******************* */
@@ -122,7 +134,22 @@ footer {
 /* TABLET */
 /* da 992px in giù */
 @media screen and (max-width: 992px) {
+
     /* menu inline scompare e appare hamburger */
+    #navbar-hamburger {
+        display: block;
+    }
+
+    #navbar-inline {
+        display: none;
+    }
+
+    /* il contenuto del main non è più spaziato sui lati */
+    #main-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
     /* nel footer, in basso a sinistra scompaiono i testi accanto all'immagine */
 }
 
@@ -140,12 +167,6 @@ footer {
     main {
         /* offset per la sidebar che ha position:fixed */
         padding-left: 100px;
-    }
-
-    /* il contenuto del main non è più spaziato sui lati */
-    #main-container {
-        width: 95%;
-        margin: 0 auto;
     }
 
     /* nel footer scompare tutta la parte in fondo a destra (barra volume) */
