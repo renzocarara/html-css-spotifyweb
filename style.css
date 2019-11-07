@@ -315,6 +315,30 @@ footer {
 
 #footer-center-bottom {
     display: flex;
+    /* width: 450px; */
+}
+
+#playing-bar::before,
+#playing-bar::after {
+    content: '';
+    display: inline-block;
+    width: 187px;
+    position: relative;
+    bottom: 5px;
+    border-bottom: 3px solid gray;
+}
+
+#playing-bar:hover::before {
+    border-bottom: 3px solid #20D560;
+}
+
+#footer-center-bottom small:last-child {
+    margin-left: 5px;
+}
+
+/* ----------------------------------- */
+/* #footer-center-bottom {
+    display: flex;
     width: 450px;
 }
 
@@ -333,8 +357,8 @@ footer {
 
 #footer-center-bottom small:last-child {
     margin-left: 5px;
-}
-
+} */
+/* -------------------------------- */
 #footer-right {
     display: flex;
     align-items: center;
@@ -359,7 +383,7 @@ footer {
 }
 
 #footer-right-volume:hover::before {
-    border-bottom: 3px solid #20D560;
+    border-color: #20D560;
 }
 
 /* ************************************************* */
@@ -425,7 +449,12 @@ footer {
 @media screen and (max-width: 570px) {
 
     /* restringo la width della barra di avanzamento play */
-    #footer-center-bottom {
-        width: 220px;
+    #playing-bar::before,
+    #playing-bar::after {
+        width: 70px;
     }
+
+    /* #footer-center-bottom {
+        width: 220px;
+    } */
 }
