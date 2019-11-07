@@ -11,6 +11,13 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
 #container {
     height: 100vh;
 }
@@ -21,11 +28,12 @@ body {
     clear: both;
 }
 
-h1 {
-    font-size: 32px;
-    color: white;
-    margin-bottom: 20px;
-    padding-left: 15px;
+.mr-5 {
+    margin-right: 5px;
+}
+
+.mr-10 {
+    margin-right: 10px;
 }
 
 /* ******************* */
@@ -113,7 +121,7 @@ main p {
 /* ******* ASIDE ***** */
 /* ******************* */
 .white {
-    color: white;
+    color: #f2f2f2;
 }
 
 .gray {
@@ -292,37 +300,47 @@ footer {
 }
 
 #footer-center-top i {
-    padding: 0 15px 10px 15px;
+    padding: 0 15px 10px 10px;
 }
 
-/* tasto pausa */
-/* #footer-center-top:nth-child(3) {} */
 #footer-center-bottom {
     display: flex;
+    width: 450px;
 }
 
-#playing-bar {
-    /* flex-basis: 70px; */
-}
-
-#playing-bar i {
-    display: inline-block;
-}
-
-#playing-bar i::before,
-#playing-bar i::after {
-    content: '';
-    display: inline-block;
-    height: 3px;
-    width: 100px;
+#playing-bar-left,
+#playing-bar-right {
+    width: calc(50% - 38px);
+    height: 1px;
     position: relative;
-    bottom: 6px;
+    bottom: -6px;
     border-bottom: 3px solid gray;
 }
 
+#footer-center-bottom small:last-child {
+    margin-left: 5px;
+}
+
 #footer-right {
+    display: flex;
+    align-items: center;
     color: gray;
     display: flex;
+}
+
+#footer-right-server,
+#footer-right-desktop {
+    margin-right: 10px
+}
+
+#footer-right-volume::before,
+#footer-right-volume::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    position: relative;
+    bottom: 5px;
+    border-bottom: 3px solid gray;
 }
 
 /* ************************************************* */
@@ -362,17 +380,33 @@ footer {
         display: none;
     }
 
-    /* altezza del footer sembra maggiore? */
     /* la width della sidebar diminuisce */
     aside {
         width: 72px;
     }
 
     main {
-        /* offset per la sidebar che ha position:fixed */
+        /* adeguo l'offset per la sidebar che ha position:fixed */
         padding-left: 72px;
     }
 
     /* nel footer scompare tutta la parte in fondo a destra (barra volume) */
-    /* ???nel footer la barra di avanzamento manca di minuti finali e icona repeat??? */
+    #footer-right {
+        display: none;
+    }
+
+    /* faccio allargare l'item centrale per occupare lo spazio rimanente*/
+    #footer-center {
+        flex-grow: 1;
+    }
+}
+
+/* EXTRA-SMALL */
+/* da 570px in giù */
+@media screen and (max-width: 570px) {
+
+    /* restringo la width della barra di avanzamento play */
+    #footer-center-bottom {
+        width: 220px;
+    }
 }
