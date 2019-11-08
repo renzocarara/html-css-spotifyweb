@@ -36,6 +36,12 @@ h1 {
     margin-right: 10px;
 }
 
+.registered {
+    font-size: 8px;
+    position: relative;
+    bottom: 10px;
+}
+
 /* ******************* */
 /* ******* MAIN ****** */
 /* ******************* */
