@@ -38,6 +38,13 @@ h1 {
     margin-right: 10px;
 }
 
+.style-thumb {
+    font-size: 10px;
+    color: white;
+    position: relative;
+    bottom: 3px;
+}
+
 .registered {
     font-size: 8px;
     position: relative;
